@@ -1,0 +1,52 @@
+﻿@{
+    var result = "";
+    if (IsPost)
+    {
+        var title = Request["title"];
+        var body = Request["body"];
+
+        var filedata = title + "," + body + Environment.NewLine;
+
+        var dataFile = Server.MapPath("~/App_Data/employeeinfo.txt");
+        File.WriteAllText(@dataFile, filedata);
+        result = "Information saved.";
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <form id="form3" method="post">
+        <div>
+            <table>
+                <tr>
+                    <td>EmployeeID:</td>
+                    <td><input id="EmployeeID" name="EID" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>EmployeeNRIC:</td>
+                    <td><input id="EmployeeNRIC" name="ENRIC" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>EmployeeName:</td>
+                    <td><input id="EmployeeName" name="ENAME" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>EmployeeMobile:</td>
+                    <td><input id="EmployeeMobile" name="EMOBILE" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>EmployeeEmail:</td>
+                    <td><input id="EmployeeEmail" name="EEMAIL" type="text" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

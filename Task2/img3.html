@@ -1,0 +1,38 @@
+<!--
+    Name: Joen Tai
+    UOW ID: 7432100
+    SIM ID: 10237942
+-->
+
+<!Doctype html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <style>
+        img {
+            width: 400px;
+            height: auto;
+        }
+        figure {
+            width: 80%;
+        }
+    </style>
+    <body>
+        <h3>The last ingredient needed!</h3>
+        <figure>
+            <img class="changeImages" src="images/img3.jpg">
+            <figcaption>Roasted Marshmallow</figcaption>
+        </figure>
+        <script>
+            $(document).ready(function(){
+                $(".changeImages").on('load', function() {
+                    $(".changeImages").animate({
+                        height: '400px',
+                        width: '600px'
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

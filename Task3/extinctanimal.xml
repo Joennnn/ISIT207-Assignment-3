@@ -1,0 +1,23 @@
+<!--
+    Name: Joen Tai
+    UOW ID: 7432100
+    SIM ID: 10237942 
+-->
+
+<extinctanimal> 
+ <animal> 
+ <Type>Woolly Mammoth</Type> <Rank>One</Rank> 
+ </animal> 
+ <animal> 
+ <Type>Dodo</Type> <Rank>Two</Rank> 
+ </animal> 
+ <animal> 
+ <Type>Sabre-toothed Cat</Type> <Rank>Three</Rank> 
+ </animal> 
+ <animal> 
+ <Type>Great Auk</Type> <Rank>Four</Rank> 
+ </animal> 
+ <animal> 
+ <Type>Stellers Sea Cow</Type> <Rank>Five</Rank> 
+ </animal> 
+</extinctanimal> 

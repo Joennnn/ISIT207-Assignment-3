@@ -1,0 +1,68 @@
+﻿@*
+    Name: Joen Tai
+    UOW ID: 7432100
+    SIM ID: 10237942
+*@
+
+@{
+    var dataFile = Server.MapPath("~/App_Data/vote.txt");
+    Array userData = File.ReadAllLines(dataFile);
+
+    int lines = 0;
+    using (TextReader reader = File.OpenText(dataFile))
+    {
+        while (reader.ReadLine() != null) { lines++; }
+    };
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<style>
+    body {
+        margin: 5%;
+    }
+</style>
+<body>
+    <h3>Total number of votes</h3>
+    <p>@lines</p>
+
+    <br /><br />
+    <h3>Votes for each lecturer</h3>
+    @{
+        int count1 = 0;
+        int count2 = 0;
+        int count3 = 0;
+
+        foreach (string dataLine in userData)
+        {
+            if (dataLine.ToUpper() == "LECT1")
+            {
+                count1++;
+            }
+            else if (dataLine.ToUpper() == "LECT2")
+            {
+                count2++;
+            }
+            else if (dataLine.ToUpper() == "LECT3")
+            {
+                count3++;
+            }
+        }
+    }
+    <p>
+        Lect 1: <br />
+        @count1
+    </p>
+    <p>
+        Lect 2: <br />
+        @count2
+    </p>
+    <p>
+        Lect 3: <br />
+        @count3
+    </p>
+</body>
+</html>
